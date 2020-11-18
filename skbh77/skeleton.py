@@ -145,7 +145,7 @@ def read_in_algorithm_codes_and_tariffs(alg_codes_file):
 ############ THE CITY FILE IS IN THE FOLDER 'city-files'.
 ############
 
-input_file = "AISearchfile012.txt"
+input_file = "AISearchfile017.txt"
 
 ############
 ############ PLEASE SCROLL DOWN UNTIL THE NEXT BLOCK OF CAPITALIZED COMMENTS.
@@ -229,7 +229,7 @@ print("The codes and tariffs have been read from 'alg_codes_and_tariffs.txt':")
 ############ THE RESERVED STRING VARIABLE 'my_user_name' SHOULD BE SET AT YOUR USER-NAME, E.G., "abcd12"
 ############
 
-my_user_name = "abcd12"
+my_user_name = "skbh77"
 
 ############
 ############ YOU CAN SUPPLY, IF YOU WANT, YOUR FULL NAME. THIS IS NOT USED AT ALL BUT SERVES AS
@@ -240,8 +240,8 @@ my_user_name = "abcd12"
 ############ ARE SET AT SOMETHING).
 ############
 
-my_first_name = ""
-my_last_name = ""
+my_first_name = "Elis"
+my_last_name = "Mostyn"
 
 ############
 ############ YOU NEED TO SUPPLY THE ALGORITHM CODE IN THE RESERVED STRING VARIABLE 'algorithm_code'
@@ -249,7 +249,7 @@ my_last_name = ""
 ############ 'alg_codes_and_tariffs.txt' (READ THIS FILE TO SEE THE CODES).
 ############
 
-algorithm_code = "SA"
+algorithm_code = "AS"
 
 ############
 ############ DO NOT TOUCH OR ALTER THE CODE BELOW! YOU HAVE BEEN WARNED!
@@ -275,14 +275,32 @@ added_note = ""
 ############
 
 
+##print(num_cities)
+##for i in range(0,len(dist_matrix)):
+##    print(i, "" , dist_matrix[i])
+
+print("\n")
+
+
+
+
+def bestFirst(num_cities,dist_matrix):
+    #Dict containing index to travel to and cost of it 
+    start = 0
+    tour = [0]
+    weights = {}
+    for i in range(0,len(dist_matrix)):
+        if i not in tour:
+            
+            
+    print(weight)
+    print(sum(weight))
 
 
 
 
 
-
-
-
+tour,tour_length = aSSearch(num_cities,dist_matrix)
 
 
 
