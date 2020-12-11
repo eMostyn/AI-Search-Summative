@@ -145,7 +145,7 @@ def read_in_algorithm_codes_and_tariffs(alg_codes_file):
 ############ THE CITY FILE IS IN THE FOLDER 'city-files'.
 ############
 
-input_file = "AISearchfile535.txt"
+input_file = "AISearchfile048.txt"
 
 ############
 ############ PLEASE SCROLL DOWN UNTIL THE NEXT BLOCK OF CAPITALIZED COMMENTS.
@@ -268,7 +268,7 @@ print("   your algorithm code is legal and is " + algorithm_code + " -" + code_d
 ############ YOUR TOUR THAT YOU MIGHT BE INTERESTED IN LATER.
 ############
 
-added_note = ""
+added_note = "Num of cities * 2 and 1000 its"
 
 ############
 ############ NOW YOUR CODE SHOULD BEGIN.
@@ -284,7 +284,7 @@ def nearestNeighbour(num_cities,dist_matrix):
     weight = []
     while len(currTour) != num_cities:
         weights = dist_matrix[currTour[-1]]
-        smallest = [9999,0]
+        smallest = [999999999,0]
         for i in range(0,len(weights)):
             if i not in currTour:
                 if weights[i] != 0 and weights[i] < smallest[0]:
@@ -316,7 +316,7 @@ def calculateEdge(forbidden,pLevels,currentVert):
     total = sumEdgeWeights(forbidden,pLevels,currentVert)
     for i in range(0,len(dist_matrix)):
         if i not in forbidden:
-            hDesirability = 1/(dist_matrix[currentVert][i])
+            hDesirability = 1/(dist_matrix[currentVert][i]) #a|szh.P
             currP = pLevels[currentVert][i]
             p = ( (currP)**a * (hDesirability**b))/total
             if p>bestP:
@@ -335,15 +335,16 @@ def copyArr(arr1):
     for num in arr1:
         newArr.append([num])
     return newArr
+
 def ACO():
-    N = 5
+    N = num_cities*2
     P0 = nearestNeighbour(num_cities,dist_matrix)[1]/N
     pLevels = [[ P0 for _ in range(num_cities) ] for _ in range(num_cities)]
     bestTour = [[],9999999999999999]
     startingPos= antsOnVerts(N,num_cities)
     t = 0
-    max_it = 4
-    while t<max_it:
+    max_it = 1000
+    while t<max_it: #sets
         antTours = copyArr(startingPos)
         costs = [ 0 for _ in range(N) ]
         minTour = [[],9999999999999999]
@@ -368,9 +369,10 @@ def ACO():
     return bestTour
         
             
-
+start = time.time()
 tour,tour_length = ACO()
-
+end = time.time()
+print(end-start)
 
 
 
