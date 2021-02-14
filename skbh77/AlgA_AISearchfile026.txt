@@ -1,0 +1,5 @@
+USER = skbh77 (Elis Mostyn),
+ALGORITHM CODE = AC, NAME OF CITY-FILE = AISearchfile026.txt,
+SIZE = 26, TOUR LENGTH = 1479,
+6,10,16,14,9,11,24,5,3,18,13,20,23,25,2,4,1,8,21,19,7,17,15,22,0,12,
+NOTE = Ants:26 Iterations: : 63628 Alpha: 8 Beta: 15 Rho: 0.7 W: 25

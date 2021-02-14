@@ -1,0 +1,5 @@
+USER = skbh77 (Elis Mostyn),
+ALGORITHM CODE = PS, NAME OF CITY-FILE = AISearchfile012.txt,
+SIZE = 12, TOUR LENGTH = 230,
+0,1,11,7,10,9,6,5,4,2,8,3,
+NOTE = 

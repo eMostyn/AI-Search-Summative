@@ -1,0 +1,5 @@
+USER = skbh77 (Elis Mostyn),
+ALGORITHM CODE = AC, NAME OF CITY-FILE = AISearchfile017.txt,
+SIZE = 17, TOUR LENGTH = 1704,
+13,1,15,0,7,11,12,6,16,9,8,4,14,2,5,3,10,
+NOTE = Num of cities * 2 and 1000 its
